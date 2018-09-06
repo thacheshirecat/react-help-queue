@@ -3,12 +3,18 @@ import PropTypes from 'prop-types';
 
 function Ticket(props){
   var VeryUglyStyling = {
-    backgroundColor: 'purple',
-    color: 'gold',
-    fontSize: '20px'
+
   };
   return (
-    <div style={VeryUglyStyling}>
+    <div>
+      <style jsx>{`
+        div {
+          background-color: purple;
+          color: gold;
+          font-size: 20px;
+          width: 400px;
+        }
+        `}</style>
       <h3>{props.location} - {props.names}</h3>
       <p><em>{props.issue}</em></p>
       <p>{props.time}</p>
