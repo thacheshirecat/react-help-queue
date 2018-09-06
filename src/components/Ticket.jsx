@@ -2,8 +2,13 @@ import React from "react";
 import PropTypes from "prop-types";
 
 function Ticket(props){
+  var VeryUglyStyling = {
+    backgroundColor: 'purple',
+    color: 'gold',
+    fontSize: '20px'
+  }
   return (
-    <div>
+    <div style={VeryUglyStyling}>
       <h3>{props.location} - {props.names}</h3>
       <p><em>{props.issue}</em></p>
       <hr/>
