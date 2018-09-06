@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 
 function Header()
 {
@@ -7,7 +7,7 @@ function Header()
     fontFamily: 'Comic Sans MS',
     color: 'red',
     fontSize: '57'
-  }
+  };
   return (
     <div style={UglyStyling}>
       <h1>Help Queue!</h1>

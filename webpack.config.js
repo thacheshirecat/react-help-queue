@@ -34,11 +34,11 @@ module.exports = {
       {
         test: /\.jsx?$/,
         enforce: "pre",
-        loader: "babel-loader",
+        loader: "eslint-loader",
         exclude: /node_modules/,
         options: {
           emitWarning: true,
-          configFile: "./eslintrc.json"
+          configFile: "./.eslintrc.json"
         }
       },
       {
