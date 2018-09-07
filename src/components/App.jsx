@@ -8,7 +8,7 @@ import NewTicketForm from './NewTicketForm';
 function App()
 {
   return (
-    <div>
+    <div className="container">
       <Header/>
       <Switch>
         <Route exact path='/' component={TicketList} />

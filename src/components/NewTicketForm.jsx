@@ -1,4 +1,5 @@
 import React from 'react';
+import catPic from '../assets/images/cat.jpg';
 
 function NewTicketForm(){
   return(
@@ -32,6 +33,7 @@ function NewTicketForm(){
             id='issue' />
           <button type='submit'>Help!</button>
         </form>
+        <img src={catPic}/>
       </div>
     </div>
   );

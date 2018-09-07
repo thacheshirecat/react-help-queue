@@ -4,15 +4,23 @@ import { Link } from 'react-router-dom';
 function Header()
 {
   var UglyStyling = {
-    backgroundColor: 'blue',
+    backgroundColor: 'gold',
     fontFamily: 'Comic Sans MS',
-    color: 'red',
+    color: 'purple',
     fontSize: '57'
   };
   return (
     <div style={UglyStyling}>
       <h1>Help Queue!</h1>
-      <Link to="/">Home</Link> | <Link to="/newticket">Create Ticket</Link>
+      <Link className="links" to="/">Home</Link> | <Link className="links" to="/newticket">Create Ticket</Link>
+      <style jsx>{`
+          .links {
+            color: white;
+          }
+          .links:hover {
+            color: red;
+          }
+            `}</style>
     </div>
   );
 }
