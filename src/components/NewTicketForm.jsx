@@ -1,7 +1,21 @@
 import React from 'react';
 import catPic from '../assets/images/cat.jpg';
+import PropTypes from 'prop-types';
 
-function NewTicketForm(){
+function NewTicketForm(props){
+  let _names = null;
+  let _location = null;
+  let _issue = null;
+
+  function handleNewTicketFormSubmission(event)
+  {
+    event.preventDefault();
+    props.onNewTicketCreation({names: _names, location: _location, issue: _issue});
+    _names.value = '';
+    _location.value = '';
+    _issue.value = '';
+  }
+
   return(
     <div>
       <style jsx>{`
@@ -19,18 +33,21 @@ function NewTicketForm(){
         }
       `}</style>
       <div>
-        <form>
+        <form onSubmit={handleNewTicketFormSubmission}>
           <input
             placeholder='Names'
             type='text'
-            id='names'/>
+            id='names'
+            ref={(input) => {_names = input;}}/>
           <input
             placeholder='Location'
             type='text'
-            id='location'/>
+            id='location'
+            ref={(input) => {_location = input;}}/>
           <textarea
             placeholder='Que Problemo?'
-            id='issue' />
+            id='issue'
+            ref={(input) => {_issue = input;}}/>
           <button type='submit'>Help!</button>
         </form>
         <img src={catPic}/>
@@ -38,5 +55,9 @@ function NewTicketForm(){
     </div>
   );
 }
+
+NewTicketForm.propTypes = {
+  onNewTicketCreation: PropTypes.func
+};
 
 export default NewTicketForm;
