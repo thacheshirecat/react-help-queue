@@ -5,7 +5,7 @@ import Header from './Header';
 import TicketList  from './TicketList';
 import NewTicketControl from './NewTicketControl';
 
-class App extends React.Component()
+class App extends React.Component
 {
 
   constructor(props)
