@@ -7,20 +7,12 @@ function Header()
     backgroundColor: 'gold',
     fontFamily: 'Comic Sans MS',
     color: 'purple',
-    fontSize: '57'
+    fontSize: '30'
   };
   return (
     <div style={UglyStyling}>
       <h1>Help Queue!</h1>
-      <Link className="links" to="/">Home</Link> | <Link className="links" to="/newticket">Create Ticket</Link>
-      <style jsx>{`
-          .links {
-            color: white;
-          }
-          .links:hover {
-            color: red;
-          }
-            `}</style>
+      <Link to='/'>Home</Link> | <Link className='links' to='/newticket'>Create Ticket</Link> | <Link className='links' to='/admin'>Admin</Link>
     </div>
   );
 }
