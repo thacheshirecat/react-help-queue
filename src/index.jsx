@@ -8,8 +8,9 @@ import { Provider } from 'react-redux';
 
 import App from './components/App';
 import ticketListReducer from './reducers/ticket-list-reducer';
+import rootReducer from './reducers/index'
 
-const store = createStore(ticketListReducer);
+const store = createStore(rootReducer);
 
 let unsubscribe = store.subscribe(() =>
   console.log(store.getState())

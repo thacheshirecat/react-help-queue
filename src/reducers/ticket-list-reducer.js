@@ -15,5 +15,12 @@ export default (state = {}, action) => {
       return newState;
     default:
       return state;
+
+    case 'UPDATE_TIME':
+
+      return newState;
+
+    default:
+      return state;
   }
 };

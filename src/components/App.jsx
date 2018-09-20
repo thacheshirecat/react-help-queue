@@ -12,16 +12,6 @@ import Admin from './Admin';
 class App extends React.Component
 {
 
-  constructor(props)
-  {
-    super(props);
-    console.log(props);
-    this.state = {
-      selecetedTicket: null
-    };
-    this.handleChangingSelecetedTicket = this.handleChangingSelecetedTicket.bind(this);
-  }
-
   componentDidMount()
   {
     this.waitTimeUpdateTimer = setInterval(() =>
@@ -44,11 +34,6 @@ class App extends React.Component
     // this.setState({masterTicketList: newMasterTicketList});
   }
 
-  handleChangingSelecetedTicket(ticketId)
-  {
-    this.setState({selectedTicket: ticketId});
-  }
-
   render()
   {
     return (
@@ -63,11 +48,7 @@ class App extends React.Component
           <Route
             path='/admin'
             render={(props)=>
-              <Admin
-                ticketList={this.props.masterTicketList}
-                currentRouterPath={props.location.pathname}
-                onChangingSelectedTicket={this.handleChangingSelecetedTicket}
-                selectedTicket={this.state.selectedTicket} /> } />
+              <Admin currentRouterPath={props.location.pathname} /> } />
         </Switch>
       </div>
     );
@@ -80,7 +61,7 @@ App.propTypes = {
 
 const mapStateToProps = state => {
   return {
-    masterTicketList: state
+    masterTicketList: state.masterTicketList
   }
 }
 
