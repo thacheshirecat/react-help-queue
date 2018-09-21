@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import connect from 'react-redux';
+import { connect } from 'react-redux';
 
 import TicketList from './TicketList';
 import TicketDetail from './TicketDetail';
@@ -34,6 +34,6 @@ const mapStateToProps = state => {
     selectedTicket: state.selectedTicket,
     ticketList: state.masterTicketList
   };
-}
+};
 
 export default connect(mapStateToProps)(Admin);

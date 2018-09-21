@@ -8,7 +8,7 @@ import { Provider } from 'react-redux';
 
 import App from './components/App';
 import ticketListReducer from './reducers/ticket-list-reducer';
-import rootReducer from './reducers/index'
+import rootReducer from './reducers/index';
 
 const store = createStore(rootReducer);
 
